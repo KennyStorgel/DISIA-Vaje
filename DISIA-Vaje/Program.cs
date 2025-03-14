@@ -4,14 +4,52 @@
     {
         static void Main(string[] args)
         {
+            Avtor avtor = new Avtor();
+            Avtor avtor2 = new Avtor("Bine");
+            Avtor avtor3 = new Avtor("Bine", "Jagodnik", 'm', 30, "bine@gmail.com");
 
+            // metoda objekta, vsak objekt ima svojo kopijo metode
+            Console.WriteLine(avtor.SpremeniVNiz());
+            Console.WriteLine(avtor2.SpremeniVNiz());
+            Console.WriteLine(avtor3.SpremeniVNiz());
+
+            Console.WriteLine(avtor.Ime);
+
+            // metoda razreda (ena sama), ki ji podamo objekt Avtor
+            Console.WriteLine(Avtor.SpremeniVNiz2(avtor3));
+
+            Knjiga knjiga = new Knjiga(avtor3);
+            Console.WriteLine(knjiga.SpremeniVNiz());
+
+        }
+
+        public static void TestAvtorKnjiga() 
+        {
+            Avtor avtor = new Avtor();
+            Avtor avtor2 = new Avtor("Bine");
+            Avtor avtor3 = new Avtor("Bine", "Jagodnik", 'm', 30, "bine@gmail.com");
+
+            // metoda objekta, vsak objekt ima svojo kopijo metode
+            Console.WriteLine(avtor.SpremeniVNiz());
+            Console.WriteLine(avtor2.SpremeniVNiz());
+            Console.WriteLine(avtor3.SpremeniVNiz());
+
+            Console.WriteLine(avtor.Ime);
+
+            // metoda razreda (ena sama), ki ji podamo objekt Avtor
+            Console.WriteLine(Avtor.SpremeniVNiz2(avtor3));
+
+            Knjiga knjiga = new Knjiga(avtor3);
+            Console.WriteLine(knjiga.SpremeniVNiz());
+        }
+
+        public static void DumpMetoda() 
+        {
+            Primeri.TryCatch1();
+            //Primeri.TryCatch2();
 
             //Vislice.Igraj();
             Primeri.Geslo();
-
-
-
-
 
             /*
             Vaje4.DodatnaMetoda();
